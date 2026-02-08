@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jigma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {}
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xyflow/react@12.10.0/dist/style.css" crossorigin="anonymous" />
+    <style>
+      /* Basic reset and font smoothing */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #171717; /* neutral-900 */
+      }
+      .react-flow__handle {
+        width: 10px;
+        height: 10px;
+        background: #a3a3a3; /* neutral-400 */
+        border: 2px solid #262626; /* neutral-800 */
+      }
+      
+      /* Custom Animations */
+      @keyframes modalFadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes modalFadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+      @keyframes modalScaleIn {
+        from { opacity: 0; transform: scale(0.95) translateY(10px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      @keyframes modalScaleOut {
+        from { opacity: 1; transform: scale(1) translateY(0); }
+        to { opacity: 0; transform: scale(0.95) translateY(10px); }
+      }
+
+      .animate-modal-fade {
+        animation: modalFadeIn 0.2s ease-out forwards;
+      }
+      .animate-modal-fade-out {
+        animation: modalFadeOut 0.2s ease-in forwards;
+      }
+      
+      .animate-modal-scale {
+        animation: modalScaleIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .animate-modal-scale-out {
+        animation: modalScaleOut 0.2s ease-in forwards;
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "html-to-image": "https://esm.sh/html-to-image@^1.11.13",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
+    "@xyflow/react": "https://esm.sh/@xyflow/react@^12.10.0",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
