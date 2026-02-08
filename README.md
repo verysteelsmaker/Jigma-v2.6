@@ -43,7 +43,7 @@ code Text
     Clone the repository:
     code Bash
 
-    git clone https://github.com/your-username/jigma.git
+    git clone https://github.com/verysteelsmaker/Jigma-v2.6/tree/main
     cd jigma
 
     Install dependencies:
