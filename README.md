@@ -1,5 +1,9 @@
 # Jigma-v2.6
 
+<p align="center">
+  <img src="./screenshot.png" width="150" alt="Jigma App">
+</p>
+
 Jigma is a powerful desktop application built with Electron and React, designed for visual data modeling and AI-driven node-based workflows. It allows users to create complex entity relationship graphs and leverage Generative AI to process or analyze data.
 🚀 Features
 
